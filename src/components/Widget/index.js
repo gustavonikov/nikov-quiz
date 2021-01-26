@@ -43,6 +43,11 @@ Widget.Header = styled.header`
 Widget.Content = styled.div`
 	padding: 24px 32px 32px 32px;
 
+	p {
+		line-height: 22px;
+		letter-spacing: 1px;
+	}
+
 	& > *:first-child {
 		margin-top: 0;
 	}

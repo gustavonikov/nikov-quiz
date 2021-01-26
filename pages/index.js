@@ -30,18 +30,23 @@ export default function Home() {
 			<QuizContainer>
 				<Widget>
 					<Widget.Header>
+						<h1>Shadow of the Colossus</h1>
 
 					</Widget.Header>
 					<Widget.Content>
-
+						<p>
+							O jogo se concentra em um jovem chamado Wander, 
+							que deve viajar por uma terra proibida com o objetivo de derrotar dezesseis criaturas, conhecidas simplesmente como "Colossi",
+							para restaurar a vida de uma garota chamada Mono.
+						</p>
 					</Widget.Content>
 				</Widget>
 				<Widget>
 					<Widget.Header>
-
+						<h1>Quiz da galera</h1>
 					</Widget.Header>
 					<Widget.Content>
-
+						<p>Vários quiz :)</p>
 					</Widget.Content>
 				</Widget>
 				<Footer />
