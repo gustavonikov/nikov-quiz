@@ -31,7 +31,6 @@ export default function Home() {
 				<Widget>
 					<Widget.Header>
 						<h1>Shadow of the Colossus</h1>
-
 					</Widget.Header>
 					<Widget.Content>
 						<p>
@@ -46,12 +45,12 @@ export default function Home() {
 						<h1>Quiz da galera</h1>
 					</Widget.Header>
 					<Widget.Content>
-						<p>Vários quiz :)</p>
+						<p>Vários quiz!</p>
 					</Widget.Content>
 				</Widget>
 				<Footer />
 			</QuizContainer>
-			<GitHubCorner />
+			<GitHubCorner projectUrl='https://github.com/gustavonikov/nikov-quiz' />
 		</QuizBackground>
 	)
 }

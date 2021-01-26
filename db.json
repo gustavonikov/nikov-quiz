@@ -32,7 +32,8 @@
 		"theme": {
 			"colors": {
 				"primary": "#7B3F00",
-				"secondary": "#29b6f6",
+				"secondary": "#111",
+				"cardsText": "#ffdf00",
 				"mainBg": "#111",
 				"contrastText": "#FFFFFF",
 				"wrong": "#FF5722",
