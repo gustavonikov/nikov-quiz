@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Widget = styled.div`
 	margin-bottom: 24px;
 
-	border-radius: 0px;
+	border-radius: 4px;
 
 	box-shadow: 0 0 8px 0px ${({ theme }) => theme.colors.mainBg};
 
@@ -77,6 +77,10 @@ Widget.Content = styled.div`
         border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
 		border-right: 1px solid ${({ theme }) => theme.colors.primary};
 		border-left: 1px solid ${({ theme }) => theme.colors.primary};
+
+		border-radius: 4px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
     }
 `
 
