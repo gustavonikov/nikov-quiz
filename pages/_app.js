@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
 		color: ${({ theme }) => theme.colors.contrastText};
 	}
 
+	input, button {
+		font-family: 'Lato', sans-serif;
+	}
+
 	html, body {
 		min-height: 100vh;
 	}

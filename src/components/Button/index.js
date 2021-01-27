@@ -8,7 +8,7 @@ const Button = styled.button`
 
     font-size: 14px;
 	font-weight: 700;
-    letter-spacing: .15px;
+    letter-spacing: 1.25px;
    
     outline: none;
     border: none;
