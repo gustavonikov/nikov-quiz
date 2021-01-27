@@ -72,6 +72,16 @@ Widget.Content = styled.div`
 		list-style: none;
 		padding: 0;
 	}
+
+	@media screen and (max-width: 500px) {
+        border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+		border-right: 1px solid ${({ theme }) => theme.colors.primary};
+		border-left: 1px solid ${({ theme }) => theme.colors.primary};
+
+		border-radius: 6px;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+    }
 `
 
 export default Widget

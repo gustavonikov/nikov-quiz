@@ -18,7 +18,7 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.secondary};
     color: ${({ theme }) => theme.colors.cardsText};
 
-    box-shadow: 0 0 3px 0 ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0 0 2px 0 ${({ theme }) => theme.colors.secondary};
 
     &:hover {
         background-color: ${({ theme }) => theme.colors.tertiary};
