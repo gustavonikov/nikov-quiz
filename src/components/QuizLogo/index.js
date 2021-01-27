@@ -6,7 +6,7 @@ const QuizLogo = styled.div`
 
     margin: 0 auto;
 
-    background-image: url('/logo_3.png');
+    background-image: url('/logo.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
