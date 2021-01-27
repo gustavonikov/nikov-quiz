@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const Widget = styled.div`
-	margin-top: 24px;
 	margin-bottom: 24px;
 
 	border-radius: 6px;
@@ -24,6 +23,8 @@ const Widget = styled.div`
 		font-weight: 400;
 		line-height: 1;
 	}
+
+	
 `
 
 Widget.Header = styled.header`
@@ -45,6 +46,13 @@ Widget.Header = styled.header`
 `
 
 Widget.Content = styled.div`
+	form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
 	padding: 24px 32px 32px 32px;
 
 	p {

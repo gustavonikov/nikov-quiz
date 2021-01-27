@@ -31,11 +31,12 @@
 		],
 		"theme": {
 			"colors": {
-				"primary": "#623511",
-				"secondary": "#111",
-				"cardsText": "#ffdf00",
+				"primary": "#8c5404",
+				"secondary": "#ed8a0a",
+				"tertiary": "#bc6c0c",
+				"cardsText": "#f7d813",
 				"mainBg": "#111",
-				"contrastText": "#FFFFFF",
+				"contrastText": "#efe3d1",
 				"wrong": "#FF5722",
 				"success": "#4CAF50"
 			},

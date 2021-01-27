@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -9,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 const SVGWrapper = styled.svg`
-    fill: ${({ theme }) => theme.colors.secondary};
+    fill: ${({ theme }) => theme.colors.mainBg};
     color: ${({ theme }) => theme.colors.contrastText};
     cursor: pointer;
     &:hover .octo-arm{

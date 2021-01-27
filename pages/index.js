@@ -1,10 +1,17 @@
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import database from '../db.json'
+import { useRouter } from 'next/router'
 
+import Head from 'next/head'
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import QuizLogo from '../src/components/QuizLogo'
+import Input from '../src/components/Input'
+import Button from '../src/components/Button'
+
+import database from '../db.json'
 
 const Title = styled.h1`
 	font-size: 50px;
@@ -25,19 +32,39 @@ export const QuizContainer = styled.div`
 `
 
 export default function Home() {
+	const router = useRouter()
+
+	const [name, setName] = useState('')
+
+	function handleSubmit(ev) {
+		ev.preventDefault()
+		console.log(name)
+		router.push(`/quiz?name=${name}`)
+	}
+
 	return (
 		<QuizBackground backgroundImage={database.bg}>
+			<Head>
+				<title>NikovQuiz - Divirta-se!</title>
+			</Head>
 			<QuizContainer>
+				<QuizLogo />
 				<Widget>
 					<Widget.Header>
 						<h1>Shadow of the Colossus</h1>
 					</Widget.Header>
 					<Widget.Content>
-						<p>
-							O jogo se concentra em um jovem chamado Wander, 
-							que deve viajar por uma terra proibida com o objetivo de derrotar dezesseis criaturas, conhecidas simplesmente como "Colossi",
-							para restaurar a vida de uma garota chamada Mono.
-						</p>
+						<form onSubmit={(ev) => handleSubmit(ev)}>
+							<Input 
+								placeholder="Digite seu nome :)" 
+								value={name} 
+								onChange={({ target }) => setName(target.value)}
+								required
+							/>
+							<Button type="submit">
+								JOGAR
+							</Button>
+						</form>
 					</Widget.Content>
 				</Widget>
 				<Widget>
@@ -48,7 +75,6 @@ export default function Home() {
 						<p>Vários quiz!</p>
 					</Widget.Content>
 				</Widget>
-				<Footer />
 			</QuizContainer>
 			<GitHubCorner projectUrl='https://github.com/gustavonikov/nikov-quiz' />
 		</QuizBackground>
