@@ -117,7 +117,7 @@ const ResultWidgetWrapper = styled.div`
     margin: 25px auto 10px;
 
     @media screen and (max-width: 600px) {
-        width: 300px;
+        width: 320px;
 
         margin-top: 165px;
     }
@@ -195,9 +195,9 @@ export default function QuizPage() {
 
     function handleSubmit() {
         if (questionIndex < database.questions.length && nextQuestion < database.questions.length) {
-            setTimeout(() => setQuestionIndex(nextQuestion), 1500)
+            setTimeout(() => setQuestionIndex(nextQuestion), 1200)
         } else {
-            setTimeout(() => setShowResult(true), 1000)
+            setTimeout(() => setShowResult(true), 1200)
         }
     }
 
