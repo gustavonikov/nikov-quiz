@@ -42,11 +42,11 @@ const GlobalStyle = createGlobalStyle`
 		cursor: pointer;
 	}
 
-	 .swal-modal {
+	.swal-modal {
 		width: 250px;
-		background-color: ${({ theme }) => `${theme.colors.primary}`};
+		background-color: ${({ theme }) => `${theme.colors.darkBrown}`};
 
-		border: 1px solid ${({ theme }) => `${theme.colors.secondary}`};
+		border: 1px solid ${({ theme }) => `${theme.colors.secondary}70`};
 	}
 
 	.swal-content {

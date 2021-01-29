@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { AiFillHome } from 'react-icons/ai'
+import { FaCheck } from 'react-icons/fa'
+import { CgCloseO } from 'react-icons/cg'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import swal from '@sweetalert/with-react'
@@ -20,10 +22,31 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
     const [inputCheckedId, setInputCheckedId] = useState('')
     const isCorrect = selectedAlternative === question.answer
 
-    function answerAlert(text, symbol) {
+    function answerAlert(text) {
         swal(
-            <h4>Você {text} &nbsp; {symbol}</h4>
+            <h4>
+                Resposta {text} &nbsp;
+                {
+                    text === 'correta' ?
+                    (
+                        <FaCheck
+                            size={25}
+                            color={database.theme.colors.success}
+                            style={{ marginBottom: '-5px' }}
+                        />
+                    )
+                    :
+                    (
+                        <CgCloseO
+                        size={27}
+                        color={database.theme.colors.wrong} 
+                        style={{ marginBottom: '-8px' }}
+                    />
+                    )
+                }
+            </h4>
         )
+        
         const inputChecked = document.getElementById(inputCheckedId)
         inputChecked.checked = false
         setIsAnswerSubmitted(false)
@@ -74,8 +97,8 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
                     <Button type="submit">
                         Confirmar
                     </Button>
-                    {isAnswerSubmitted && isCorrect && answerAlert('acertou', ':)')}
-                    {isAnswerSubmitted && !isCorrect && answerAlert('errou', ':(')}
+                    {isAnswerSubmitted && isCorrect && answerAlert('correta')}
+                    {isAnswerSubmitted && !isCorrect && answerAlert('errada')}
                 </form>
             </Widget.Content>
         </Widget>
