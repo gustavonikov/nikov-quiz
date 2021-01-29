@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	.swal-content {
-		color: ${({ theme }) => `${theme.colors.contrastText}`};
+		color: ${({ theme }) => `${theme.colors.cardsText}`};
 	}
 
 	.swal-button.swal-button--confirm {
