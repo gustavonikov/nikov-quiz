@@ -162,9 +162,9 @@ function ResultWidget({ results }) {
                     </Widget.Header>
 
                     <Widget.Content>
-                        <p>Hey{ }!</p>
+                        <p>Hey{ },</p>
                         <p style={{ textUnderlinePosition: 'under', textDecoration: 'underline' }}>
-                            Você acertou <Span>{results}</Span> de {totalQuestions} perguntas! <br />
+                            Você acertou <Span>{results}</Span> de {totalQuestions} perguntas <br />
                         </p>
                         <span>{appropriateMessage}</span>
                         <p>
