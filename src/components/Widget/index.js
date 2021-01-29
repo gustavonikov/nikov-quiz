@@ -84,4 +84,29 @@ Widget.Content = styled.div`
     }
 `
 
+Widget.Topic = styled.a`
+	width: 100%;
+
+	padding: 10px 15px;
+	margin-bottom: 18px;
+
+	color: ${({ theme }) => theme.colors.contrastText};
+	background-color: ${({ theme }) => `${theme.colors.primary}40`};
+
+	border-radius: ${({ theme }) => theme.borderRadius};
+	
+	display: block;
+
+	cursor: pointer;
+	outline: 0;
+	text-decoration: none;
+	transition: .3s;
+	
+	input {
+		margin-right: 10px;
+
+		cursor: pointer;
+	}
+`
+
 export default Widget
