@@ -109,6 +109,8 @@ const H1 = styled.h1`
         width: 150px;
 
         display: flex;
+
+        -webkit-tap-highlight-color: transparent;
     }
 `
 
@@ -195,9 +197,9 @@ export default function QuizPage() {
 
     function handleSubmit() {
         if (questionIndex < database.questions.length && nextQuestion < database.questions.length) {
-            setTimeout(() => setQuestionIndex(nextQuestion), 1200)
+            setTimeout(() => setQuestionIndex(nextQuestion), 1400)
         } else {
-            setTimeout(() => setShowResult(true), 1200)
+            setTimeout(() => setShowResult(true), 1400)
         }
     }
 
