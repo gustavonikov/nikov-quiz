@@ -41,6 +41,25 @@ const GlobalStyle = createGlobalStyle`
 	a, button {
 		cursor: pointer;
 	}
+
+	 .swal-modal {
+		width: 250px;
+		background-color: ${({ theme }) => `${theme.colors.darkBrown}`};
+	}
+
+	.swal-content {
+		color: ${({ theme }) => `${theme.colors.contrastText}`};
+	}
+
+	.swal-button.swal-button--confirm {
+		background-color: ${({ theme }) => `${theme.colors.secondary}`};
+		color: ${({ theme }) => `${theme.colors.cardsText}`};
+
+		&:hover {
+			background-color: ${({ theme }) => theme.colors.tertiary};
+        	box-shadow: 0 0 2px 1px ${({ theme }) => theme.colors.cardsText};
+		}
+	}
 `
 
 const { theme } = database

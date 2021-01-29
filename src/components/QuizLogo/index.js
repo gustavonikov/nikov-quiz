@@ -6,11 +6,11 @@ const upAndDown = keyframes`
     }
 
     25% {
-        transform: translateY(7px);
+        transform: translateY(6px);
     }
 
     75% {
-        transform: translateY(-7px)
+        transform: translateY(-6px)
     }
 ` 
 

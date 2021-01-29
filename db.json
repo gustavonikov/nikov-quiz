@@ -7,7 +7,7 @@
 				"image": "https://i.pinimg.com/564x/05/7a/32/057a32dffcc57430f843c4fdcbe7ec51.jpg",
 				"title": "Quantos Colossus existem no jogo?",
 				"description": "Essa é pra aquecer",
-				"answer": 2,
+				"answer": 1,
 				"alternatives": [
 					"14",
 					"16",
@@ -19,7 +19,7 @@
 				"image": "https://i.pinimg.com/originals/94/aa/19/94aa19b00e01e62edebf1370b12bfd7d.gif",
 				"title": "Qual é o nome do cavalo do personagem principal?",
 				"description": "Faz tempo em haha",
-				"answer": 1,
+				"answer": 0,
 				"alternatives": [
 					"Agro",
 					"Sirius",
@@ -31,7 +31,7 @@
 				"image": "https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/qwongkkwmy4zm7062izg.jpg",
 				"title": "Qual é o nome do personagem principal?",
 				"description": "Essa é difícil de lembrar",
-				"answer": 4,
+				"answer": 3,
 				"alternatives": [
 					"William",
 					"Mono",
@@ -50,6 +50,7 @@
 				"tertiary": "#bc6c0c",
 				"cardsText": "#f7d813",
 				"mainBg": "#111",
+				"darkBrown": "#210",
 				"contrastText": "#efe3d1",
 				"wrong": "#FF5722",
 				"success": "#4CAF50"

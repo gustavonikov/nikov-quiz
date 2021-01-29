@@ -23,8 +23,6 @@ const Widget = styled.div`
 		font-weight: 400;
 		line-height: 1;
 	}
-
-	
 `
 
 Widget.Header = styled.header`
@@ -72,6 +70,7 @@ Widget.Content = styled.div`
 		list-style: none;
 		padding: 0;
 	}
+
 
 	@media screen and (max-width: 500px) {
         border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
