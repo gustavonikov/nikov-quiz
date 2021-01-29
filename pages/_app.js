@@ -44,7 +44,9 @@ const GlobalStyle = createGlobalStyle`
 
 	 .swal-modal {
 		width: 250px;
-		background-color: ${({ theme }) => `${theme.colors.darkBrown}`};
+		background-color: ${({ theme }) => `${theme.colors.primary}`};
+
+		border: 1px solid ${({ theme }) => `${theme.colors.secondary}`};
 	}
 
 	.swal-content {
