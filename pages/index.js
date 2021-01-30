@@ -20,8 +20,23 @@ export default function Home() {
 
 	function handleSubmit(ev) {
 		ev.preventDefault()
-		console.log(name)
+		
 		router.push(`/quiz?name=${name}`)
+	}
+
+	function formatExternalLink(link) {
+		const [quizName, githubUser] = link.replace(/\//g, '')
+			.replace('https:', '')
+			.replace('.vercel.app', '')
+			.split('.')
+
+		const [quizFirstLetter, ...quizLetters] = quizName
+		/* const [userFirstLetter, ...userLetters] = githubUser */
+
+		const formattedQuizName = `${quizFirstLetter.toUpperCase()}${quizLetters.join('')}`
+		/* const formattedGithubUser = `${userFirstLetter.toUpperCase()}${userLetters.join('')}` */
+
+		return `${formattedQuizName} de ${githubUser}`
 	}
 
 	return (
@@ -52,10 +67,18 @@ export default function Home() {
 				</Widget>
 				<Widget>
 					<Widget.Header>
-						<h1>Quiz da galera</h1>
+						<h1>Quizes da galera</h1>
 					</Widget.Header>
 					<Widget.Content>
-						<p>Vários quiz!</p>
+						<ul>
+							{database.external.map((linkExterno) => (
+								<li>
+									<Widget.Topic href={linkExterno}>
+										{formatExternalLink(linkExterno)}
+									</Widget.Topic>
+								</li>
+							))}
+						</ul>
 					</Widget.Content>
 				</Widget>
 			</QuizContainer>

@@ -15,7 +15,9 @@ const GlobalStyle = createGlobalStyle`
 		/* New styles */
 		display: flex;
 		flex-direction: column;
+
 		font-family: 'Lato', sans-serif;
+		word-spacing: 1.8px;
 		// Leaves white at the beginning
 		color: ${({ theme }) => theme.colors.contrastText};
 	}

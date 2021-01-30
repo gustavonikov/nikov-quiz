@@ -6,14 +6,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import swal from '@sweetalert/with-react'
 
-import Button from '../src/components/Button'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
-import QuizContainer from '../src/components/QuizContainer'
-import QuizLogo from '../src/components/QuizLogo'
-import Widget from '../src/components/Widget'
+import Button from '../../src/components/Button'
+import GitHubCorner from '../../src/components/GitHubCorner'
+import QuizBackground from '../../src/components/QuizBackground'
+import QuizContainer from '../../src/components/QuizContainer'
+import QuizLogo from '../../src/components/QuizLogo'
+import Widget from '../../src/components/Widget'
 
-import database from '../db.json'
+import database from '../../db.json'
 import { useRouter } from 'next/router'
 
 function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
@@ -22,7 +22,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
     const [inputCheckedId, setInputCheckedId] = useState('')
     const isCorrect = selectedAlternative === question.answer
 
-    function answerAlert(text) {
+    function answerNotification(text) {
         swal(
             <h4>
                 Resposta {text} &nbsp;
@@ -46,7 +46,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
                 }
             </h4>
         )
-        
+
         const inputChecked = document.getElementById(inputCheckedId)
         inputChecked.checked = false
         setIsAnswerSubmitted(false)
@@ -97,8 +97,8 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
                     <Button type="submit">
                         Confirmar
                     </Button>
-                    {isAnswerSubmitted && isCorrect && answerAlert('correta')}
-                    {isAnswerSubmitted && !isCorrect && answerAlert('errada')}
+                    {isAnswerSubmitted && isCorrect && answerNotification('correta')}
+                    {isAnswerSubmitted && !isCorrect && answerNotification('errada')}
                 </form>
             </Widget.Content>
         </Widget>
@@ -117,6 +117,9 @@ const H1 = styled.h1`
 
     &:hover {
         opacity: .7;
+
+        text-decoration: underline;
+        text-underline-position: under;
     }
 
     .icon-return {
@@ -150,6 +153,17 @@ const ResultWidgetWrapper = styled.div`
 
 const Span = styled.span`
     color: ${({ theme }) => `${theme.colors.cardsText}`};
+`
+
+const Link = styled.a`
+    color: ${({ theme }) => `${theme.colors.cardsText}`};
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        text-underline-position: under;
+    }
 `
 
 function ResultWidget({ results }) {
@@ -192,17 +206,18 @@ function ResultWidget({ results }) {
                         <span>{appropriateMessage}</span>
                         <p>
                             Obrigado por participar do quiz, convide seus amigos e volte sempre!
-                    </p>
+                        </p>
                         <img
                             style={{
                                 width: "100%",
-                                height: "320px",
-                                objectFit: "cover",
+                                height: "290px",
+                                objectFit: "fill",
                                 borderRadius: '4px',
                             }}
-                            src="https://i.pinimg.com/564x/c5/86/c8/c586c8c9fceff41abda4c45bdca85ee4.jpg"
+                            src="https://i.pinimg.com/564x/d5/5c/b8/d55cb8f125c8fdcb43d29030c0a98f21.jpg"
                             alt="Shadow of the Colossus"
                         />
+                        <p>E ah, não se esqueça que há outros quizzes em nossa <Link onClick={() => router.push('/')}>página inicial</Link> para você checar!</p>
                     </Widget.Content>
                 </Widget>
             </ResultWidgetWrapper>

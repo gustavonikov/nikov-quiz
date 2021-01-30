@@ -18,7 +18,7 @@
 			{
 				"image": "https://i.pinimg.com/originals/94/aa/19/94aa19b00e01e62edebf1370b12bfd7d.gif",
 				"title": "Qual é o nome do cavalo do personagem principal?",
-				"description": "Faz tempo em haha",
+				"description": "O fiel companheiro ____________",
 				"answer": 0,
 				"alternatives": [
 					"Agro",
@@ -30,7 +30,7 @@
 			{
 				"image": "https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/qwongkkwmy4zm7062izg.jpg",
 				"title": "Qual é o nome do personagem principal?",
-				"description": "Essa é difícil de lembrar",
+				"description": "Essa é só pra quem se garante",
 				"answer": 3,
 				"alternatives": [
 					"William",
@@ -41,7 +41,9 @@
 			}
 		],
 		"external": [
-			""
+			"https://quiz-react.brenoha.vercel.app/",
+			"https://harry-potter-quiz.brunogerbasi.vercel.app/",
+			"https://flash-quiz-next.davidlpc1.vercel.app/"
 		],
 		"theme": {
 			"colors": {

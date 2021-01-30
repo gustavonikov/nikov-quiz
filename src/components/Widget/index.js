@@ -5,7 +5,7 @@ const Widget = styled.div`
 
 	border-radius: 4px;
 
-	box-shadow: 0 0 8px 0px ${({ theme }) => theme.colors.mainBg};
+	box-shadow: 0 2px 12px 0.5px ${({ theme }) => theme.colors.mainBg};
 
 	overflow: hidden;
 
@@ -51,11 +51,14 @@ Widget.Content = styled.div`
 		flex-direction: column;
 	}
 	
-	padding: 24px 32px 32px 32px;
+	padding: 24px 32px 24px 32px;
+
+	h2 {
+		line-height: 20px;
+	}
 
 	p {
-		line-height: 22px;
-		letter-spacing: 1px;
+		line-height: 20px;
 	}
 
 	& > *:first-child {
