@@ -6,8 +6,9 @@ export function OthersPeopleQuiz() {
     )
 }
 
-export async function getServerSideProps(context) {
+/* export async function getServerSideProps(context) {
     return {
 
     }
 }
+ */
