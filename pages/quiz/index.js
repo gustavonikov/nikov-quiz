@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 import { AiFillHome } from 'react-icons/ai'
 import { FaCheck } from 'react-icons/fa'
 import { CgCloseO } from 'react-icons/cg'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import { motion } from 'framer-motion'
+
 import swal from '@sweetalert/with-react'
 
 import Button from '../../src/components/Button'
@@ -12,10 +14,10 @@ import QuizBackground from '../../src/components/QuizBackground'
 import QuizContainer from '../../src/components/QuizContainer'
 import QuizLogo from '../../src/components/QuizLogo'
 import Widget from '../../src/components/Widget'
+import Link from '../../src/components/Link'
+import { H1, ResultWidgetWrapper, Span, StyledLink } from '../../src/components/ResultPageStyles'
 
 import database from '../../db.json'
-import { useRouter } from 'next/router'
-import Link from '../../src/components/Link'
 
 function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
     const [selectedAlternative, setSelectedAlternative] = useState(undefined)
@@ -106,73 +108,9 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
     )
 }
 
-const H1 = styled.h1`
-    color: ${({ theme }) => `${theme.colors.mainBg}`};
-    margin-left: 20px;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    transition: opacity .2s;
-
-    &:hover {
-        opacity: .7;
-
-        text-decoration: underline;
-        text-underline-position: under;
-    }
-
-    .icon-return {
-        margin-bottom: -5px;
-        margin-right: 10px;
-    }
-
-    @media screen and (max-width: 500px) {
-        margin-left: 10px;
-
-        font-size: 14px;
-        
-        width: 150px;
-
-        display: flex;
-
-        -webkit-tap-highlight-color: transparent;
-    }
-`
-
-const ResultWidgetWrapper = styled.div`
-    max-width: 350px;
-    margin: 25px auto 10px;
-
-    @media screen and (max-width: 600px) {
-        width: 320px;
-
-        margin-top: 165px;
-    }
-`
-
-const Span = styled.span`
-    color: ${({ theme }) => `${theme.colors.cardsText}`};
-`
-
-const StyledLink = styled.a`
-    color: ${({ theme }) => `${theme.colors.cardsText}`};
-
-    cursor: pointer;
-
-    transition: opacity .2s;
-
-    &:hover {
-        text-decoration: underline;
-        text-underline-position: under;
-
-        opacity: .7;
-    }
-`
-
 function ResultWidget({ results }) {
-    const router = useRouter();
+    const router = useRouter()
+    const { name } = router.query
 
     const totalQuestions = database.questions.length
     const percentage = Number((results / totalQuestions).toFixed(2))
@@ -199,14 +137,26 @@ function ResultWidget({ results }) {
                     Ir para página inicial
                 </H1>
             </Link>
-            <ResultWidgetWrapper>
+            <ResultWidgetWrapper
+                 as={motion.div}
+                 variants={{
+                     show: { opacity: 1, y: '0' },
+                     hidden: { opacity: 0, y: '100%' }
+                 }}
+                 initial="hidden"
+                 animate="show"
+                 transition={{
+                     duration: .7,
+                     delay: 0
+                 }}
+            >
                 <Widget>
                     <Widget.Header>
                         <h1>Seu resultado</h1>
                     </Widget.Header>
 
                     <Widget.Content>
-                        <p>Hey{ },</p>
+                        <p>Hey, { name }!</p>
                         <p style={{ textUnderlinePosition: 'under', textDecoration: 'underline' }}>
                             Você acertou <Span>{results}</Span> de {totalQuestions} perguntas <br />
                         </p>
@@ -224,7 +174,11 @@ function ResultWidget({ results }) {
                             src="https://i.pinimg.com/564x/d5/5c/b8/d55cb8f125c8fdcb43d29030c0a98f21.jpg"
                             alt="Shadow of the Colossus"
                         />
-                        <p>E ah, não se esqueça que há outros quizzes em nossa <Link href="/"><StyledLink>página inicial</StyledLink></Link> para você checar!</p>
+                        <p>
+                            E ah, não se esqueça que há outros quizzes muito divertidos da Imersão React da {' '}
+                            <Link href="https://www.alura.com.br/">
+                                <StyledLink color={database.theme.colors.contrastText}>Alura</StyledLink>
+                            </Link> em nossa <Link href="/"><StyledLink yellow>página inicial</StyledLink></Link> para você checar!</p>
                     </Widget.Content>
                 </Widget>
             </ResultWidgetWrapper>
@@ -259,7 +213,19 @@ export default function QuizPage() {
                     <ResultWidget results={results} />
                     :
                     (
-                        <QuizContainer>
+                        <QuizContainer
+                            as={motion.div}
+                            variants={{
+                                show: { opacity: 1, y: '0' },
+                                hidden: { opacity: 0, y: '100%' }
+                            }}
+                            initial="hidden"
+                            animate="show"
+                            transition={{
+                                duration: .7,
+                                delay: 0
+                            }}
+                        >
                             <Link href="/">
                                 <QuizLogo />
                             </Link>
@@ -280,4 +246,6 @@ export default function QuizPage() {
 QuestionWidget.propTypes = {
     questionIndex: PropTypes.number.isRequired,
     question: PropTypes.object.isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    addResult: PropTypes.func.isRequired,
 }

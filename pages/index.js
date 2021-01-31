@@ -82,8 +82,8 @@ export default function Home() {
 					</Widget.Header>
 					<Widget.Content>
 						<ul>
-							{database.external.map((linkExterno) => (
-								<li>
+							{database.external.map((linkExterno, index) => (
+								<li key={`quiz-${index}`}>
 									<Widget.Topic href={linkExterno}>
 										{formatExternalLink(linkExterno)}
 									</Widget.Topic>
