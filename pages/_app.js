@@ -53,6 +53,14 @@ const GlobalStyle = createGlobalStyle`
 
 	.swal-content {
 		color: ${({ theme }) => `${theme.colors.cardsText}`};
+
+		.success-icon {
+			color: ${({ theme }) => `${theme.colors.success}`};
+		}
+
+		.wrong-icon {
+			color: ${({ theme }) => `${theme.colors.wrong}`};
+		}
 	}
 
 	.swal-button.swal-button--confirm {

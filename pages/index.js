@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 import Head from 'next/head'
 import Widget from '../src/components/Widget'
@@ -31,10 +32,8 @@ export default function Home() {
 			.split('.')
 
 		const [quizFirstLetter, ...quizLetters] = quizName
-		/* const [userFirstLetter, ...userLetters] = githubUser */
 
 		const formattedQuizName = `${quizFirstLetter.toUpperCase()}${quizLetters.join('')}`
-		/* const formattedGithubUser = `${userFirstLetter.toUpperCase()}${userLetters.join('')}` */
 
 		return `${formattedQuizName} de ${githubUser}`
 	}
@@ -44,7 +43,19 @@ export default function Home() {
 			<Head>
 				<title>NikovQuiz - Divirta-se!</title>
 			</Head>
-			<QuizContainer>
+			<QuizContainer 
+				as={motion.section} 
+				variants={{
+					show: { opacity: 1, y: '0' },
+					hidden: { opacity: 0, y: '100%' }
+				}}
+				initial="hidden"
+				animate="show"
+				transition={{
+					duration: .7,
+					delay: 0
+				}}
+			>
 				<QuizLogo />
 				<Widget>
 					<Widget.Header>

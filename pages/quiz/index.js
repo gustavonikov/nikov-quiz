@@ -15,6 +15,7 @@ import Widget from '../../src/components/Widget'
 
 import database from '../../db.json'
 import { useRouter } from 'next/router'
+import Link from '../../src/components/Link'
 
 function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
     const [selectedAlternative, setSelectedAlternative] = useState(undefined)
@@ -155,14 +156,18 @@ const Span = styled.span`
     color: ${({ theme }) => `${theme.colors.cardsText}`};
 `
 
-const Link = styled.a`
+const StyledLink = styled.a`
     color: ${({ theme }) => `${theme.colors.cardsText}`};
 
     cursor: pointer;
 
+    transition: opacity .2s;
+
     &:hover {
         text-decoration: underline;
         text-underline-position: under;
+
+        opacity: .7;
     }
 `
 
@@ -188,10 +193,12 @@ function ResultWidget({ results }) {
 
     return (
         <>
-            <H1 onClick={() => router.push('/')}>
-                <AiFillHome size={28} className="icon-return" />
-                Ir para página inicial
-            </H1>
+            <Link href="/">
+                <H1>
+                    <AiFillHome size={28} className="icon-return" />
+                    Ir para página inicial
+                </H1>
+            </Link>
             <ResultWidgetWrapper>
                 <Widget>
                     <Widget.Header>
@@ -217,7 +224,7 @@ function ResultWidget({ results }) {
                             src="https://i.pinimg.com/564x/d5/5c/b8/d55cb8f125c8fdcb43d29030c0a98f21.jpg"
                             alt="Shadow of the Colossus"
                         />
-                        <p>E ah, não se esqueça que há outros quizzes em nossa <Link onClick={() => router.push('/')}>página inicial</Link> para você checar!</p>
+                        <p>E ah, não se esqueça que há outros quizzes em nossa <Link href="/"><StyledLink>página inicial</StyledLink></Link> para você checar!</p>
                     </Widget.Content>
                 </Widget>
             </ResultWidgetWrapper>
@@ -253,7 +260,9 @@ export default function QuizPage() {
                     :
                     (
                         <QuizContainer>
-                            <QuizLogo />
+                            <Link href="/">
+                                <QuizLogo />
+                            </Link>
                             <QuestionWidget
                                 question={question}
                                 questionIndex={questionIndex}
