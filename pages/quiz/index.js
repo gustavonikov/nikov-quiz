@@ -162,7 +162,7 @@ function ResultWidget({ results }) {
                         </p>
                         <span>{appropriateMessage}</span>
                         <p>
-                            Obrigado por participar do quiz, convide seus amigos e volte sempre!
+                            Obrigado por participar do quiz, mostra pro teus amigos e volte sempre!
                         </p>
                         <img
                             style={{
