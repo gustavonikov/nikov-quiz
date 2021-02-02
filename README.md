@@ -6,6 +6,14 @@ and recently was launched for PS4 (2017).
 ### Alura's platform:
 <link>https://www.alura.com.br/</link>
 
+### Purpose of the Alura's React Imersion
+Was to teach more about NextJs features and React features together, adding the styled components lib.
+
+### The main layout of the project you can find here:
+- [Link](https://www.figma.com/file/cg1MIzSRRss8ggpypQbmdD/AluraQuiz?node-id=0%3A1)
+<br/>
+I made some things different from the layout and also from the classes, removing and adding the things that i found interesting to do so.
+
 ## Main Tools
 <li>ReactJs</li>
 <li>NextJs</li>
