@@ -3,7 +3,8 @@ Is an Shadow of the Colossus quiz, made at Alura's React Imersion #02, a great g
 and recently was launched for PS4 (2017).
 <br/>
 <br/>
-###Alura's platform: <link>https://www.alura.com.br/</link>
+### Alura's platform:
+<link>https://www.alura.com.br/</link>
 
 ## Main Tools
 <li>ReactJs</li>
