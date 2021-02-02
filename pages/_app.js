@@ -45,25 +45,21 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	.swal-modal {
-		width: 250px;
+		width: 240px;
+		height: 125px;
 		background-color: ${({ theme }) => `${theme.colors.darkBrown}`};
 
 		border: 1px solid ${({ theme }) => `${theme.colors.secondary}70`};
 	}
 
 	.swal-content {
+		margin-top: 10px;
+
 		color: ${({ theme }) => `${theme.colors.cardsText}`};
 
-		.success-icon {
-			color: ${({ theme }) => `${theme.colors.success}`};
-		}
-
-		.wrong-icon {
-			color: ${({ theme }) => `${theme.colors.wrong}`};
-		}
 	}
 
-	.swal-button.swal-button--confirm {
+	/* .swal-button.swal-button--confirm {
 		background-color: ${({ theme }) => `${theme.colors.secondary}`};
 		color: ${({ theme }) => `${theme.colors.cardsText}`};
 
@@ -71,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
 			background-color: ${({ theme }) => theme.colors.tertiary};
         	box-shadow: 0 0 2px 1px ${({ theme }) => theme.colors.cardsText};
 		}
-	}
+	} */
 `
 
 const { theme } = database

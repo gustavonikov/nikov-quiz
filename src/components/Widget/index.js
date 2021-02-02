@@ -30,7 +30,7 @@ Widget.Header = styled.header`
 	justify-content: flex-start;
 	align-items: center;
 
-	padding: 18px 32px;
+	padding: 16px 32px;
 
 	background-color: ${({ theme }) => theme.colors.primary};
 	
@@ -51,7 +51,7 @@ Widget.Content = styled.div`
 		flex-direction: column;
 	}
 	
-	padding: 24px 32px 24px 32px;
+	padding: 18px 32px 20px 32px;
 
 	h2 {
 		line-height: 20px;
@@ -74,6 +74,11 @@ Widget.Content = styled.div`
 		padding: 0;
 	}
 
+	li:last-child {
+		a {
+			margin-bottom: 0;
+		}
+	}
 
 	@media screen and (max-width: 500px) {
         border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
@@ -90,7 +95,7 @@ Widget.Topic = styled.a`
 	width: 100%;
 
 	padding: 10px 15px;
-	margin-bottom: 18px;
+	margin-bottom: 12px;
 
 	color: ${({ theme }) => theme.colors.contrastText};
 	background-color: ${({ theme }) => `${theme.colors.primary}40`};
@@ -103,12 +108,24 @@ Widget.Topic = styled.a`
 	outline: 0;
 	text-decoration: none;
 	transition: .3s;
-	
+
+	line-height: 20px;
+
 	input {
 		margin-right: 10px;
 
 		cursor: pointer;
+
+		display: inline-block;
 	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	@media screen and (max-width: 1600px) {
+        font-size: 14px;
+    }	
 `
 
 export default Widget

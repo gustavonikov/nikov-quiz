@@ -19,35 +19,51 @@ import { H1, ResultWidgetWrapper, Span, StyledLink } from '../../src/components/
 
 import database from '../../db.json'
 
-function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
+function QuestionWidget({ question, questionIndex, onSubmit, addResult, name}) {
     const [selectedAlternative, setSelectedAlternative] = useState(undefined)
     const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false)
     const [inputCheckedId, setInputCheckedId] = useState('')
     const isCorrect = selectedAlternative === question.answer
 
     function answerNotification(text) {
-        swal(
-            <h4>
-                Resposta {text} &nbsp;
-                {
-                    text === 'correta' ?
-                    (
-                        <FaCheck
-                            size={25}
-                            color={database.theme.colors.success}
-                            style={{ marginBottom: '-5px' }}
-                        />
-                    )
-                    :
-                    (
-                        <CgCloseO
-                        size={27}
-                        color={database.theme.colors.wrong} 
-                        style={{ marginBottom: '-8px' }}
-                    />
-                    )
-                }
-            </h4>
+        swal({
+            buttons: false,
+            timer: 1700,
+            content: (
+                <h4>
+                    Resposta {text} &nbsp;
+                    {
+                        text === 'correta' ?
+                            (
+                                <>
+                                    <FaCheck
+                                        size={25}
+                                        color={database.theme.colors.success}
+                                        style={{ marginBottom: '-5px' }}
+                                    />
+                                    <p style={{ marginTop: '25px' }}>
+                                        Muito bem :&#41; {name}!
+                                    </p>
+                                </>
+                            )
+                            :
+                            (
+                                <>
+                                    <CgCloseO
+                                        size={27}
+                                        color={database.theme.colors.wrong}
+                                        style={{ marginBottom: '-8px' }}
+                                    />
+                                    <p style={{ marginTop: '23px' }}>
+                                        Não foi dessa vez, {name} :&#40; 
+                                    </p>
+                                </>
+                            )
+                    }
+                </h4>
+            )
+        }
+
         )
 
         const inputChecked = document.getElementById(inputCheckedId)
@@ -65,7 +81,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
                 alt={`${question.answer}`}
                 style={{
                     width: '100%',
-                    height: '150px',
+                    height: '180px',
                     objectFit: 'cover',
                 }}
             />
@@ -108,10 +124,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult }) {
     )
 }
 
-function ResultWidget({ results }) {
-    const router = useRouter()
-    const { name } = router.query
-
+function ResultWidget({ results, name }) {
     const totalQuestions = database.questions.length
     const percentage = Number((results / totalQuestions).toFixed(2))
     let appropriateMessage
@@ -119,8 +132,11 @@ function ResultWidget({ results }) {
     if (percentage <= 0.33) {
         appropriateMessage = 'Sei que você pode fazer muito melhor, da próxima vez acertará todas!'
     }
-    else if (percentage <= 0.66) {
-        appropriateMessage = 'Você foi muito beem! Com certeza matou muitos Colossus haha'
+    else if (percentage <= 0.5) {
+        appropriateMessage = 'Você foi beem! Só tá um pouco enferrujado né? haha'
+    }
+    else if (percentage <= 0.75) {
+        appropriateMessage = 'Você foi ótimo! Já deve ter matado muitos Colossus xD'
     }
     else if (percentage <= 0.99) {
         appropriateMessage = 'Parabéens! Você é um expert em Shadow of The Colossus!'
@@ -138,17 +154,17 @@ function ResultWidget({ results }) {
                 </H1>
             </Link>
             <ResultWidgetWrapper
-                 as={motion.div}
-                 variants={{
-                     show: { opacity: 1, y: '0' },
-                     hidden: { opacity: 0, y: '100%' }
-                 }}
-                 initial="hidden"
-                 animate="show"
-                 transition={{
-                     duration: .7,
-                     delay: 0
-                 }}
+                as={motion.div}
+                variants={{
+                    show: { opacity: 1, y: '0' },
+                    hidden: { opacity: 0, y: '100%' }
+                }}
+                initial="hidden"
+                animate="show"
+                transition={{
+                    duration: .7,
+                    delay: 0
+                }}
             >
                 <Widget>
                     <Widget.Header>
@@ -156,7 +172,7 @@ function ResultWidget({ results }) {
                     </Widget.Header>
 
                     <Widget.Content>
-                        <p>Hey, { name }!</p>
+                        <p>Hey, {name}!</p>
                         <p style={{ textUnderlinePosition: 'under', textDecoration: 'underline' }}>
                             Você acertou <Span>{results}</Span> de {totalQuestions} perguntas <br />
                         </p>
@@ -187,6 +203,9 @@ function ResultWidget({ results }) {
 }
 
 export default function QuizPage() {
+    const router = useRouter()
+    const { name } = router.query
+
     const [questionIndex, setQuestionIndex] = useState(0)
     const [showResult, setShowResult] = useState(false)
     const [results, setResults] = useState(0)
@@ -196,9 +215,9 @@ export default function QuizPage() {
 
     function handleSubmit() {
         if (questionIndex < database.questions.length && nextQuestion < database.questions.length) {
-            setTimeout(() => setQuestionIndex(nextQuestion), 1400)
+            setTimeout(() => setQuestionIndex(nextQuestion), 1500)
         } else {
-            setTimeout(() => setShowResult(true), 1400)
+            setTimeout(() => setShowResult(true), 1500)
         }
     }
 
@@ -210,7 +229,7 @@ export default function QuizPage() {
         <QuizBackground backgroundImage={database.bg}>
             {
                 showResult ?
-                    <ResultWidget results={results} />
+                    <ResultWidget results={results} name={name} />
                     :
                     (
                         <QuizContainer
@@ -234,6 +253,7 @@ export default function QuizPage() {
                                 questionIndex={questionIndex}
                                 onSubmit={handleSubmit}
                                 addResult={addResult}
+                                name={name}
                             />
                         </QuizContainer>
                     )

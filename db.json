@@ -38,12 +38,145 @@
 					"Sirius",
 					"Wander"
 				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/d0/fd/bf/d0fdbf47d2cac27b2ebe6fe9946b6474.jpg",
+				"title": "Qual a cor dos olhos dos Colossus normalmente?",
+				"description": "Ahh, é uma cor tão bonita",
+				"answer": 0,
+				"alternatives": [
+					"Azul-céu",
+					"Laranja amarelado",
+					"Amarelo alaranjado",
+					"Preto"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/564x/c0/c3/c2/c0c3c2499e9e6a14998f6fb9f1e7bbfd.jpg",
+				"title": "O que acontece após Wander matar algum Colossi?",
+				"description": "Urgh, essa não é uma parte legal de se ver",
+				"answer": 1,
+				"alternatives": [
+					"Wander desmaia",
+					"Tentáculos negros saem do Colossi",
+					"Wander tira uma runa mágica do corpo do Colossi",
+					"O Colossi explode"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/81/11/4b/81114bfffa33abf4d3b1dcd5fe59b283.jpg",
+				"title": "Onde fica o ponto vital do primeiro Colossi no modo fácil?",
+				"description": "Essa é nostálgica",
+				"answer": 3,
+				"alternatives": [
+					"Perna",
+					"Costas",
+					"Olhos",
+					"Cabeça"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/b3/7c/f3/b37cf3394170f31c75b5d02f2ae363db.jpg",
+				"title": "Com que se parece o Colossi número 5?",
+				"description": "Esse é beem legal",
+				"answer": 0,
+				"alternatives": [
+					"Cavalo",
+					"Girafa",
+					"Gigante",
+					"Lobo"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/64/f0/15/64f0154b8b1c3888fbe7f4286ecdcfe0.jpg",
+				"title": "Qual o número do Colossi que suas pernas são uma torre?",
+				"description": "Uhh essa é pra é fã",
+				"answer": 3,
+				"alternatives": [
+					"13",
+					"14",
+					"9",
+					"16"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/aa/a1/18/aaa118620f99542ce84e5a8da6d0f513.jpg",
+				"title": "Qual o número do Colossi que vive na quadrante D6?",
+				"description": "Essa é difiiiicil",
+				"answer": 1,
+				"alternatives": [
+					"1",
+					"6",
+					"4",
+					"8"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/564x/33/51/67/33516763bbf544ac0d8f946871b932b1.jpg",
+				"title": "O que acontece com Wander após matar os 16 Colossus?",
+				"description": ":(",
+				"answer": 2,
+				"alternatives": [
+					"Vira um Colossi",
+					"Morre",
+					"É possuído por um espírito",
+					"Nada"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/32/cc/99/32cc99081fba541cdbaf25dbbd8b8e62.jpg",
+				"title": "Qual o número do Colossi que parece uma enguia?",
+				"description": "Dizem que enguia é muito saboroso",
+				"answer": 3,
+				"alternatives": [
+					"6",
+					"8",
+					"9",
+					"7"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/3a/d4/5b/3ad45b0f1929ed1cfcd61038322afed7.jpg",
+				"title": "Qual Colossi não possui olhos?",
+				"description": "Em vez de olhos essa criatura 'vê' pelas presas",
+				"answer": 3,
+				"alternatives": [
+					"Número 14",
+					"Número 13",
+					"Número 16",
+					"Número 12"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/92/e8/7d/92e87d100c6c9106d9952033d6a99873.jpg",
+				"title": "De quem é a voz que guia Wander no jogo?",
+				"description": "Essa você vai lembrar!",
+				"answer": 0,
+				"alternatives": [
+					"Dormin",
+					"Mono",
+					"Lorde Emon",
+					"Sirius"
+				]
+			},
+			{
+				"image": "https://i.pinimg.com/236x/62/59/2e/62592e9fdd46622be18fbbbbf8011693.jpg",
+				"title": "O que acontece com Wander no fim do jogo?",
+				"description": "Ah... com certeza você lembra do fim né?!",
+				"answer": 2,
+				"alternatives": [
+					"Ele morre",
+					"Ele vive na entidade Dormin",
+					"Ele vira um bebê com chifres",
+					"Vive feliz pra sempre com Mono"
+				]
 			}
 		],
 		"external": [
 			"https://quiz-react.brenoha.vercel.app/",
 			"https://harry-potter-quiz.brunogerbasi.vercel.app/",
-			"https://flash-quiz-next.davidlpc1.vercel.app/"
+			"https://flash-quiz-next.davidlpc1.vercel.app/",
+			"https://alura-pokemon-quiz.daniloamsilva.vercel.app/"
 		],
 		"theme": {
 			"colors": {
