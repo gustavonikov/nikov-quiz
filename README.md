@@ -2,8 +2,8 @@
 Is an Shadow of the Colossus quiz, made at Alura's React Imersion #02, a great game that was first launched in 2005 for PS2
 and recently was launched for PS4 (2017).
 <br/>
-Alura's platform:
-<link>https://www.alura.com.br/</link>
+<br/>
+###Alura's platform: <link>https://www.alura.com.br/</link>
 
 ## Main Tools
 <li>ReactJs</li>
