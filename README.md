@@ -15,7 +15,7 @@ and recently was launched for PS4 (2017).
 
 ## How to install
 
-```git clone https://github.com/gustavonikov/nikov-quiz.git``` or you can manually download the zip file,
+Choose a folder to install and type  ```git clone https://github.com/gustavonikov/nikov-quiz.git``` on the system's terminal, or you can manually download the zip file,
 that's in the button 'Code' of this repository.
 Then you run ```npm install```, to install all the packages and dependencys.
 
