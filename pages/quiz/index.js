@@ -19,7 +19,7 @@ import { H1, ResultWidgetWrapper, Span, StyledLink } from '../../src/components/
 
 import database from '../../db.json'
 
-function QuestionWidget({ question, questionIndex, onSubmit, addResult, name}) {
+function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) {
     const [selectedAlternative, setSelectedAlternative] = useState(undefined)
     const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false)
     const [inputCheckedId, setInputCheckedId] = useState('')

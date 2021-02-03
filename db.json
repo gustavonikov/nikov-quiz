@@ -8,6 +8,7 @@
 				"title": "Quantos Colossus existem no jogo?",
 				"description": "Essa é pra aquecer",
 				"answer": 1,
+				"answer-description": "Originalmente a intenção eram 48 Colossus, que depois foram cortados para 24, e no jogo só chegaram 16 com 8 abandonados no artbook.",
 				"alternatives": [
 					"14",
 					"16",
