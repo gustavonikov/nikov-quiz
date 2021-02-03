@@ -12,13 +12,13 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		/* New styles */
+		
 		display: flex;
 		flex-direction: column;
 
 		font-family: 'Lato', sans-serif;
 		word-spacing: 1.8px;
-		// Leaves white at the beginning
+		
 		color: ${({ theme }) => theme.colors.contrastText};
 	}
 
@@ -45,8 +45,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	.swal-modal {
-		width: 240px;
-		height: 125px;
+		width: 255px;
+		height: 150px;
 		background-color: ${({ theme }) => `${theme.colors.darkBrown}`};
 
 		border: 1px solid ${({ theme }) => `${theme.colors.secondary}70`};
@@ -57,6 +57,9 @@ const GlobalStyle = createGlobalStyle`
 
 		color: ${({ theme }) => `${theme.colors.cardsText}`};
 
+		p {
+			font-weight: 400;
+		}
 	}
 
 	/* .swal-button.swal-button--confirm {

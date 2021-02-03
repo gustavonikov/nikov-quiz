@@ -8,7 +8,7 @@
 				"title": "Quantos Colossus existem no jogo?",
 				"description": "Essa é pra aquecer",
 				"answer": 1,
-				"answer-description": "Originalmente a intenção eram 48 Colossus, que depois foram cortados para 24, e no jogo só chegaram 16 com 8 abandonados no artbook.",
+				"answerDescription": "16",
 				"alternatives": [
 					"14",
 					"16",
@@ -21,6 +21,7 @@
 				"title": "Qual é o nome do cavalo do personagem principal?",
 				"description": "O fiel companheiro ____________",
 				"answer": 0,
+				"answerDescription": "Agro",
 				"alternatives": [
 					"Agro",
 					"Sirius",
@@ -33,6 +34,7 @@
 				"title": "Qual é o nome do personagem principal?",
 				"description": "Essa é só pra quem se garante",
 				"answer": 3,
+				"answerDescription": "Wander",
 				"alternatives": [
 					"William",
 					"Mono",
@@ -45,6 +47,7 @@
 				"title": "Qual a cor dos olhos dos Colossus normalmente?",
 				"description": "Ahh, é uma cor tão bonita",
 				"answer": 0,
+				"answerDescription": "Azul-céu",
 				"alternatives": [
 					"Azul-céu",
 					"Laranja amarelado",
@@ -57,6 +60,7 @@
 				"title": "O que acontece após Wander matar algum Colossi?",
 				"description": "Urgh, essa não é uma parte legal de se ver",
 				"answer": 1,
+				"answerDescription": "Tentáculos negros saem do Colossi",
 				"alternatives": [
 					"Wander desmaia",
 					"Tentáculos negros saem do Colossi",
@@ -69,6 +73,7 @@
 				"title": "Onde fica o ponto vital do primeiro Colossi no modo fácil?",
 				"description": "Essa é nostálgica",
 				"answer": 3,
+				"answerDescription": "Cabeça",
 				"alternatives": [
 					"Perna",
 					"Costas",
@@ -81,6 +86,7 @@
 				"title": "Com que se parece o Colossi número 5?",
 				"description": "Esse é beem legal",
 				"answer": 0,
+				"answerDescription": "Cavalo",
 				"alternatives": [
 					"Cavalo",
 					"Girafa",
@@ -93,6 +99,7 @@
 				"title": "Qual o número do Colossi que suas pernas são uma torre?",
 				"description": "Uhh essa é pra é fã",
 				"answer": 3,
+				"answerDescription": "16",
 				"alternatives": [
 					"13",
 					"14",
@@ -105,6 +112,7 @@
 				"title": "Qual o número do Colossi que vive na quadrante D6?",
 				"description": "Essa é difiiiicil",
 				"answer": 1,
+				"answerDescription": "6",
 				"alternatives": [
 					"1",
 					"6",
@@ -117,10 +125,11 @@
 				"title": "O que acontece com Wander após matar os 16 Colossus?",
 				"description": ":(",
 				"answer": 2,
+				"answerDescription": "É possuído por uma Entidade",
 				"alternatives": [
 					"Vira um Colossi",
 					"Morre",
-					"É possuído por um espírito",
+					"É possuído por uma Entidade",
 					"Nada"
 				]
 			},
@@ -129,6 +138,7 @@
 				"title": "Qual o número do Colossi que parece uma enguia?",
 				"description": "Dizem que enguia é muito saboroso",
 				"answer": 3,
+				"answerDescription": "7",
 				"alternatives": [
 					"6",
 					"8",
@@ -141,6 +151,7 @@
 				"title": "Qual Colossi não possui olhos?",
 				"description": "Em vez de olhos essa criatura 'vê' pelas presas",
 				"answer": 3,
+				"answerDescription": "12",
 				"alternatives": [
 					"Número 14",
 					"Número 13",
@@ -153,6 +164,7 @@
 				"title": "De quem é a voz que guia Wander no jogo?",
 				"description": "Essa você vai lembrar!",
 				"answer": 0,
+				"answerDescription": "Dormin",
 				"alternatives": [
 					"Dormin",
 					"Mono",
@@ -165,6 +177,7 @@
 				"title": "O que acontece com Wander no fim do jogo?",
 				"description": "Ah... com certeza você lembra do fim né?!",
 				"answer": 2,
+				"answerDescription": "Ele vira um bebê com chifres",
 				"alternatives": [
 					"Ele morre",
 					"Ele vive na entidade Dormin",

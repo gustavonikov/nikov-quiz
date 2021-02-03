@@ -15,6 +15,7 @@ import QuizContainer from '../../src/components/QuizContainer'
 import QuizLogo from '../../src/components/QuizLogo'
 import Widget from '../../src/components/Widget'
 import Link from '../../src/components/Link'
+import UnderlinedText from '../../src/components/UnderlinedText'
 import { H1, ResultWidgetWrapper, Span, StyledLink } from '../../src/components/ResultPageStyles'
 
 import database from '../../db.json'
@@ -28,7 +29,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
     function answerNotification(text) {
         swal({
             buttons: false,
-            timer: 1700,
+            timer: text === 'correta' ? 2000 : 2800,
             content: (
                 <h4>
                     Resposta {text} &nbsp;
@@ -41,7 +42,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
                                         color={database.theme.colors.success}
                                         style={{ marginBottom: '-5px' }}
                                     />
-                                    <p style={{ marginTop: '25px' }}>
+                                    <p style={{ marginTop: '30px' }}>
                                         Muito bem, {name}! :&#41; 
                                     </p>
                                 </>
@@ -54,8 +55,8 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
                                         color={database.theme.colors.wrong}
                                         style={{ marginBottom: '-8px' }}
                                     />
-                                    <p style={{ marginTop: '23px' }}>
-                                        Não foi dessa vez, {name} :&#40; 
+                                    <p style={{ marginTop: '20px' }}>
+                                       Pooxa, a resposta certa era: <UnderlinedText>{question.answerDescription}</UnderlinedText>
                                     </p>
                                 </>
                             )
@@ -173,7 +174,7 @@ function ResultWidget({ results, name }) {
 
                     <Widget.Content>
                         <p>Hey, {name}!</p>
-                        <p style={{ textUnderlinePosition: 'under', textDecoration: 'underline' }}>
+                        <p style={{ textDecoration: 'underline', textUnderlinePosition: 'under' }}>
                             Você acertou <Span>{results}</Span> de {totalQuestions} perguntas <br />
                         </p>
                         <span>{appropriateMessage}</span>
@@ -215,9 +216,9 @@ export default function QuizPage() {
 
     function handleSubmit() {
         if (questionIndex < database.questions.length && nextQuestion < database.questions.length) {
-            setTimeout(() => setQuestionIndex(nextQuestion), 1500)
+            setTimeout(() => setQuestionIndex(nextQuestion), 1900)
         } else {
-            setTimeout(() => setShowResult(true), 1500)
+            setTimeout(() => setShowResult(true), 1900)
         }
     }
 
