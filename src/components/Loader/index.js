@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { useRouter } from 'next/router'
+import PropTypes from 'prop-types'
 
 const LoadingPage = styled.div`
     width: 100%;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import PropTypes from 'prop-types'
 import { AiFillHome } from 'react-icons/ai'
 import { FaCheck } from 'react-icons/fa'
 import { CgCloseO } from 'react-icons/cg'
-import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 
 import swal from '@sweetalert/with-react'
@@ -173,7 +173,7 @@ function ResultWidget({ results, name }) {
                         </p>
                         <span>{appropriateMessage}</span>
                         <p>
-                            Obrigado por participar do quiz, mostra pros teus amigos e volte sempre!
+                            Obrigado por participar do quiz, mostra pros teus amigos e volte sempre :)
                         </p>
                         <img
                             style={{
