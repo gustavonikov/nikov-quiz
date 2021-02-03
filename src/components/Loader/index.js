@@ -57,7 +57,7 @@ const LoaderTitle = styled.div`
     background-size: cover;
     background-position: center;
 
-    animation: ${TitleAppearance} linear 6.5s infinite;
+    animation: ${TitleAppearance} linear 6s infinite;
 
     @media screen and (max-width: 600px) {
         width: 90%;
@@ -85,7 +85,7 @@ const LoaderImage = styled.div`
 export default function Loader(name, audio) {
     const router = useRouter()
    
-    setTimeout(() => router.push(`/quiz?name=${name}`) , 6.6 * 1000)
+    setTimeout(() => router.push(`/quiz?name=${name}`) , 6.05 * 1000)
 
     return (
         <LoadingPage>
