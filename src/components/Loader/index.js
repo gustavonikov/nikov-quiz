@@ -62,6 +62,12 @@ const LoaderTitle = styled.div`
     @media screen and (max-width: 600px) {
         width: 90%;
     }
+
+    @media screen and (min-width: 1601px) {
+        height: 350px;
+
+        margin-top: 80px;
+    }
 `
 
 const LoaderImage = styled.div`
@@ -79,6 +85,11 @@ const LoaderImage = styled.div`
     @media screen and (max-width: 600px) {
         width: 200px;
         height: 250px;
+    }
+
+    @media screen and (min-width: 1601px) {
+        width: 400px;
+        height: 450px;
     }
 `
 
