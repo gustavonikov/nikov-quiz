@@ -27,8 +27,13 @@ const QuizLogo = styled.div`
 
     animation: ${upAndDown} linear 3s infinite;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 600px) {
         margin: 0;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1600px) {
+        width: 180px;
+        height: 150px;
     }
 `
 

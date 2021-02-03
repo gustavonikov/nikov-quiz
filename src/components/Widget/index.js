@@ -23,6 +23,12 @@ const Widget = styled.div`
 		font-weight: 400;
 		line-height: 1;
 	}
+
+	@media screen and (min-width: 601px) and (max-width: 1600px) {
+        h1, h2, h3 {
+			font-size: 15px;
+		}
+    }
 `
 
 Widget.Header = styled.header`
@@ -41,6 +47,10 @@ Widget.Header = styled.header`
 	* {
 		margin: 0;
 	}
+
+	@media screen and (min-width: 601px) and (max-width: 1600px) {
+        padding: 14px 28px;
+    }
 `
 
 Widget.Content = styled.div`
@@ -53,11 +63,7 @@ Widget.Content = styled.div`
 	
 	padding: 18px 32px 20px 32px;
 
-	h2 {
-		line-height: 20px;
-	}
-
-	p {
+	h2, p {
 		line-height: 20px;
 	}
 
@@ -80,7 +86,7 @@ Widget.Content = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 500px) {
+	@media screen and (max-width: 600px) {
         border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
 		border-right: 1px solid ${({ theme }) => theme.colors.primary};
 		border-left: 1px solid ${({ theme }) => theme.colors.primary};
@@ -88,6 +94,14 @@ Widget.Content = styled.div`
 		border-radius: 4px;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
+    }
+	
+	@media screen and (min-width: 601px) and (max-width: 1600px) {
+        padding: 14px 28px 16px 28px;
+
+		h2, p {
+		line-height: 18px;
+	}
     }
 `
 
@@ -120,11 +134,15 @@ Widget.Topic = styled.a`
 	}
 
 	&:hover {
-		opacity: 0.8;
+		opacity: 0.75;
 	}
 
-	@media screen and (max-width: 1600px) {
+	@media screen and (min-width: 601px) and (max-width: 1600px) {
         font-size: 14px;
+
+		padding: 6px 12px;
+
+		line-height: 18px;
     }	
 `
 

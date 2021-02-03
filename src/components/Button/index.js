@@ -25,6 +25,10 @@ const Button = styled.button`
         background-color: ${({ theme }) => theme.colors.tertiary};
         box-shadow: 0 0 2px 1px ${({ theme }) => theme.colors.cardsText};
     }
+    
+    @media screen and (min-width: 601px) and (max-width: 1600px) {
+        height: 34px;
+    }
 `
 
 export default Button
