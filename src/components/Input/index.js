@@ -22,7 +22,7 @@ const Input = styled.input`
     color: ${({ theme }) => theme.colors.contrastText};
 
     @media screen and (min-width: 601px) and (max-width: 1600px) {
-        width: 263px;
+        width: 273px;
     }
 `
 
