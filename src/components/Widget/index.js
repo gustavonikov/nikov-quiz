@@ -97,7 +97,7 @@ Widget.Content = styled.div`
     }
 	
 	@media screen and (min-width: 601px) and (max-width: 1600px) {
-        padding: 14px 28px 16px 28px;
+        padding: 16px 28px 16px 28px;
 
 		h2, p {
 		line-height: 18px;
@@ -140,7 +140,7 @@ Widget.Topic = styled.a`
 	@media screen and (min-width: 601px) and (max-width: 1600px) {
         font-size: 14px;
 
-		padding: 6px 12px;
+		padding: 7px 12px;
 
 		line-height: 18px;
     }	

@@ -57,7 +57,7 @@ const LoaderTitle = styled.div`
     background-size: cover;
     background-position: center;
 
-    animation: ${TitleAppearance} linear 6s infinite;
+    animation: ${TitleAppearance} linear 6s;
 
     @media screen and (max-width: 600px) {
         width: 90%;

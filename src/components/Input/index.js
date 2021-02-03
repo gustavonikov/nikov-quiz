@@ -20,6 +20,10 @@ const Input = styled.input`
 
     background-color: ${({ theme }) => theme.colors.mainBg};
     color: ${({ theme }) => theme.colors.contrastText};
+
+    @media screen and (min-width: 601px) and (max-width: 1600px) {
+        width: 263px;
+    }
 `
 
 export default Input

@@ -13,7 +13,7 @@ const QuizContainer = styled.div`
 	}
 
 	@media screen and (min-width: 601px) and (max-width: 1600px) {
-        max-width: 310px;
+        max-width: 315px;
 
 		margin: auto 15%;
     }

@@ -17,6 +17,7 @@ import Widget from '../../src/components/Widget'
 import Link from '../../src/components/Link'
 import UnderlinedText from '../../src/components/UnderlinedText'
 import { H1, ResultWidgetWrapper, Span, StyledLink } from '../../src/components/ResultPageStyles'
+import Image from '../../src/components/Image'
 
 import database from '../../db.json'
 
@@ -77,14 +78,9 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
             <Widget.Header>
                 <h3>{`Pergunta ${questionIndex + 1} de ${database.questions.length}`}</h3>
             </Widget.Header>
-            <img
+            <Image
                 src={`${question.image}`}
                 alt={`${question.answer}`}
-                style={{
-                    width: '100%',
-                    height: '180px',
-                    objectFit: 'cover',
-                }}
             />
             <Widget.Content>
                 <h2>
