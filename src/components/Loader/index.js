@@ -107,3 +107,7 @@ export default function Loader({ name }) {
         </LoadingPage>
     )
 }
+
+Loader.propTypes = {
+    name: PropTypes.string.isRequired,
+}
