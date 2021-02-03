@@ -12,6 +12,10 @@ Was to teach more about NextJs features and React features together, adding the 
 ### The main layout of the project you can find here:
 - [Link](https://www.figma.com/file/cg1MIzSRRss8ggpypQbmdD/AluraQuiz?node-id=0%3A1)
 <br/>
+### The base repository:
+- [Repository](https://github.com/alura-challenges/aluraquiz-base/)
+<br/>
+
 I made some things different from the layout and also from the classes, removing and adding the things that i found interesting to do so.
 
 ## Main Tools
