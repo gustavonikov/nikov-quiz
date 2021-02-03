@@ -30,7 +30,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
     function answerNotification(text) {
         swal({
             buttons: false,
-            timer: text === 'correta' ? 2000 : 2850,
+            timer: text === 'correta' ? 2000 : 2800,
             content: (
                 <h4>
                     Resposta {text} &nbsp;
@@ -64,9 +64,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
                     }
                 </h4>
             )
-        }
-
-        )
+        })
 
         const inputChecked = document.getElementById(inputCheckedId)
         inputChecked.checked = false
@@ -265,4 +263,10 @@ QuestionWidget.propTypes = {
     question: PropTypes.object.isRequired,
     onSubmit: PropTypes.func.isRequired,
     addResult: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+}
+
+ResultWidget.propTypes = {
+    results: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
 }
