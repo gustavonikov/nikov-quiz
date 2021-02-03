@@ -42,7 +42,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
                                         style={{ marginBottom: '-5px' }}
                                     />
                                     <p style={{ marginTop: '25px' }}>
-                                        Muito bem {name}! :&#41; 
+                                        Muito bem, {name}! :&#41; 
                                     </p>
                                 </>
                             )
