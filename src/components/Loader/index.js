@@ -82,7 +82,7 @@ const LoaderImage = styled.div`
     }
 `
 
-export default function Loader({name}) {
+export default function Loader({ name }) {
     const router = useRouter()
    
     setTimeout(() => router.push(`/quiz?name=${name}`) , 6 * 1000)
