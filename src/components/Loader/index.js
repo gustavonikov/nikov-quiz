@@ -62,7 +62,7 @@ const LoaderTitle = styled.div`
     @media screen and (max-width: 600px) {
         width: 90%;
 
-        margin-top: 30px;
+        margin-top: 25px;
     }
 
     @media screen and (min-width: 1601px) {
@@ -98,7 +98,7 @@ const LoaderImage = styled.div`
 export default function Loader({ name }) {
     const router = useRouter()
    
-    /* setTimeout(() => router.push(`/quiz?name=${name}`) , 6 * 1000) */
+    setTimeout(() => router.push(`/quiz?name=${name}`) , 6 * 1000)
 
     return (
         <LoadingPage>
