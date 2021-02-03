@@ -63,8 +63,6 @@ const LoaderTitle = styled.div`
         width: 90%;
 
         margin-top: 20px;
-        
-        height: 200px;
     }
 
     @media screen and (min-width: 1601px) {
