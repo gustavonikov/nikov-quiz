@@ -30,7 +30,7 @@ function QuestionWidget({ question, questionIndex, onSubmit, addResult, name }) 
     function answerNotification(text) {
         swal({
             buttons: false,
-            timer: text === 'correta' ? 2000 : 2800,
+            timer: text === 'correta' ? 2000 : 2850,
             content: (
                 <h4>
                     Resposta {text} &nbsp;
