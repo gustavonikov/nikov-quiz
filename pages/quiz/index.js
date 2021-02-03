@@ -246,7 +246,7 @@ export default function QuizPage() {
                             }}
                         >
                             <Link href="/">
-                                <QuizLogo />
+                                <QuizLogo title="Voltar à página inicial" />
                             </Link>
                             <QuestionWidget
                                 question={question}
