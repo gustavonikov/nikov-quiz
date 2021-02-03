@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
@@ -11,18 +11,22 @@ import QuizContainer from '../src/components/QuizContainer'
 import QuizLogo from '../src/components/QuizLogo'
 import Input from '../src/components/Input'
 import Button from '../src/components/Button'
+import Loader from '../src/components/Loader'
 
 import database from '../db.json'
 
 export default function Home() {
 	const router = useRouter()
 
+	const audioSource = '/audio/intro.mp3'
 	const [name, setName] = useState('')
+	const [loading, setLoading] = useState(false)
+	const [audio, setAudio] = useState()
 
 	function handleSubmit(ev) {
 		ev.preventDefault()
-		
-		router.push(`/quiz?name=${name}`)
+
+		setLoading(true)
 	}
 
 	function formatExternalLink(link) {
@@ -38,62 +42,67 @@ export default function Home() {
 		return `${formattedQuizName} de ${githubUser}`
 	}
 
+	useEffect(() => setAudio(new Audio(audioSource)), [])
+
 	return (
-		<QuizBackground backgroundImage={database.bg}>
-			<Head>
-				<title>NikovQuiz - Divirta-se!</title>
-			</Head>
-			<QuizContainer 
-				as={motion.section} 
-				variants={{
-					show: { opacity: 1, y: '0' },
-					hidden: { opacity: 0, y: '100%' }
-				}}
-				initial="hidden"
-				animate="show"
-				transition={{
-					duration: .7,
-					delay: 0
-				}}
-			>
-				<QuizLogo />
-				<Widget>
-					<Widget.Header>
-						<h1>Shadow of the Colossus</h1>
-					</Widget.Header>
-					<Widget.Content>
-						<form onSubmit={(ev) => handleSubmit(ev)}>
-							<Input
-								name="name" 
-								placeholder="Digite seu nome :)" 
-								value={name} 
-								onChange={({ target }) => setName(target.value)}
-								required
-							/>
-							<Button type="submit">
-								JOGAR
-							</Button>
-						</form>
-					</Widget.Content>
-				</Widget>
-				<Widget>
-					<Widget.Header>
-						<h1>Quizes da galera</h1>
-					</Widget.Header>
-					<Widget.Content>
-						<ul>
-							{database.external.map((linkExterno, index) => (
-								<li key={`quiz-${index}`}>
-									<Widget.Topic href={linkExterno}>
-										{formatExternalLink(linkExterno)}
-									</Widget.Topic>
-								</li>
-							))}
-						</ul>
-					</Widget.Content>
-				</Widget>
-			</QuizContainer>
-			<GitHubCorner projectUrl='https://github.com/gustavonikov/nikov-quiz' />
-		</QuizBackground>
+		loading ?
+			<Loader name={name} />
+			:
+			<QuizBackground backgroundImage={database.bg}>
+				<Head>
+					<title>NikovQuiz - Divirta-se!</title>
+				</Head>
+				<QuizContainer
+					as={motion.section}
+					variants={{
+						show: { opacity: 1, y: '0' },
+						hidden: { opacity: 0, y: '100%' }
+					}}
+					initial="hidden"
+					animate="show"
+					transition={{
+						duration: .7,
+						delay: 0
+					}}
+				>
+					<QuizLogo />
+					<Widget>
+						<Widget.Header>
+							<h1>Shadow of the Colossus</h1>
+						</Widget.Header>
+						<Widget.Content>
+							<form onSubmit={(ev) => handleSubmit(ev)}>
+								<Input
+									name="name"
+									placeholder="Digite seu nome :)"
+									value={name}
+									onChange={({ target }) => setName(target.value)}
+									required
+								/>
+								<Button type="submit" onClick={() => audio.play()}>
+									JOGAR
+								</Button>
+							</form>
+						</Widget.Content>
+					</Widget>
+					<Widget>
+						<Widget.Header>
+							<h1>Quizes da galera</h1>
+						</Widget.Header>
+						<Widget.Content>
+							<ul>
+								{database.external.map((linkExterno, index) => (
+									<li key={`quiz-${index}`}>
+										<Widget.Topic href={linkExterno}>
+											{formatExternalLink(linkExterno)}
+										</Widget.Topic>
+									</li>
+								))}
+							</ul>
+						</Widget.Content>
+					</Widget>
+				</QuizContainer>
+				<GitHubCorner projectUrl='https://github.com/gustavonikov/nikov-quiz' />
+			</QuizBackground>
 	)
 }
