@@ -85,7 +85,7 @@ const LoaderImage = styled.div`
 export default function Loader(name, audio) {
     const router = useRouter()
    
-    setTimeout(() => router.push(`/quiz?name=${name}`) , 6.5 * 1000)
+    setTimeout(() => router.push(`/quiz?name=${name}`) , 6.6 * 1000)
 
     return (
         <LoadingPage>
