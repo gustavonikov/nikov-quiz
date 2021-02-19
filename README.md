@@ -27,8 +27,10 @@ I made some things different from the layout and also from the classes, removing
 
 ## How to install
 
-Choose a folder to install, open the system's terminal in it and type  ```git clone https://github.com/gustavonikov/nikov-quiz.git```, or you can manually download the zip file,
-that's in the button 'Code' of this repository.
+Choose a folder to install, open the system's terminal in it and type
+  ```git clone https://github.com/gustavonikov/nikov-quiz.git```, 
+or you can manually download the zip file, that's in the button 'Code' of this repository.
+
 Then you run ```npm install```, to install all the packages and dependencies.
 
 ## Commands
